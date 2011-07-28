@@ -95,11 +95,6 @@ function init(url) {
         var options = "";
         for (var i in profiles) {
             var profile = profiles[i];
-            // Based on profile settings, determine what the used
-            // text would be and select on exact profile match
-            if (profile.getUrl(url) == profile.title) {
-                Settings.setActiveProfileId(profile.id);
-            }
             options += "<option value='"+profile.id+"'";
             if (profile.id == Settings.getActiveProfileId()){
                 options += " selected='true' ";
